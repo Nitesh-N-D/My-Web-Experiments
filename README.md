@@ -1,4 +1,4 @@
-# my-web-experiments  
+# My-Web-Experiments  
 
 A collection of small web projects created to practice and improve frontend development skills.  
 Each project demonstrates basic to intermediate concepts using **HTML, CSS, and JavaScript**.  
