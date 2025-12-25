@@ -4,70 +4,98 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Web Experiments</title>
+
   <style>
+ 
     body {
       font-family: Arial, sans-serif;
-      
       margin: 0;
       padding: 20px;
       text-align: center;
-      background-image: url("https://img.freepik.com/premium-vector/online-data-protection-shield-abstract-with-computer-technology_29971-309.jpg?semt=ais_hybrid&w=740&q=80");
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+
+    
+      background-color: #f4f6f9;
     }
+
+
     header {
       margin-bottom: 30px;
     }
+
     h1 {
-      color: #222;
+      color: #0f172a;
+      margin-bottom: 8px;
     }
-    p {
-      color: #555;
+
+    header p {
+      color: #475569;
+      font-size: 16px;
     }
+
     .projects {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      gap: 22px;
       justify-items: center;
-      margin-top: 20px;
+      margin-top: 30px;
       padding: 0 10px;
     }
     .card {
-      background: #fff;
-      border-radius: 12px;
+      background-color: #ffffff;
+      border-radius: 14px;
       padding: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       width: 100%;
       max-width: 280px;
-      transition: transform 0.2s;
       text-align: left;
+
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
     }
+
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
     }
+
     .card h2 {
       margin-top: 0;
-      color: #222;
+      color: #1e293b;
+      font-size: 18px;
     }
+
     .card p {
-      color: #555;
-      margin: 10px 0;
+      color: #475569;
+      margin: 10px 0 14px;
+      font-size: 14px;
+      line-height: 1.5;
     }
     a {
       text-decoration: none;
-      color: #007acc;
+      color: #2563eb;
       font-weight: bold;
+      font-size: 14px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 480px) {
+      body {
+        padding: 14px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <header>
     <h1>🚀 My Web Experiments</h1>
-    <p>Welcome! Here are my mini projects hosted on GitHub Pages:</p>
+    <p>Welcome! Here are my mini projects built using HTML, CSS, and JavaScript.</p>
   </header>
 
   <div class="projects">
+
     <div class="card">
       <h2>Colour Change Page</h2>
       <p>A fun experiment with background color changes.</p>
@@ -87,17 +115,21 @@
     </div>
 
     <div class="card">
-      <h2>To-Do-List</h2>
-      <p>A fun experiment with task tracking and interactive to-do list design.</p>
+      <h2>To-Do List</h2>
+      <p>An interactive task tracking and to-do list experiment.</p>
       <a href="to-do-list/index.html" target="_blank">🔗 View Project</a>
     </div>
 
-     <div class="card">
+    <div class="card">
       <h2>Anna University Web</h2>
-      <p>A basic web experiment showcasing an Anna University registration form with HTML, CSS styling, and JavaScript-based client-side validation.</p>
-      <a href="" target="_blank">🔗 View Project</a>
+      <p>
+        A basic web experiment showcasing an Anna University registration form
+        with HTML, CSS, and JavaScript validation.
+      </p>
+      <a href="#" target="_blank">🔗 View Project</a>
     </div>
-    
+
   </div>
+
 </body>
 </html>
