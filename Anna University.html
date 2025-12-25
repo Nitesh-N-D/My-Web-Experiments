@@ -1,0 +1,82 @@
+<html>
+       <head>
+         <title>Anna University</title>
+<style>
+  body {
+    background-color: navy;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    color:gold;
+}
+
+a {
+    color:cyan;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+a:hover {
+    text-decoration:underline;
+}
+
+</style>
+       </head>
+       <body >
+       <center>
+       <h1>Anna University</h1>
+       <p>Anna University is a public state university located in Chennai, Tamil Nadu, India. The main campus is in Guindy. It was originally established on 4 September 1978 and is named after C. N. Annadurai, former Chief Minister of Tamil Nadu.</p>
+       <br>
+       <a href="https://en.wikipedia.org/wiki/Anna_University">View More</a>
+       <p>Click here you to view the anna university website</p>
+       <a href="https://www.annauniv.edu/">Anna University</a><br>
+       <marquee direction="right" bgcolor="black" behavior="scroll" width="500px">
+       <img src="OIP.jpg" alt="Anna University" width="300px" height="300px">
+       </marquee>
+       
+       <form action="/sumbit" method="post">
+             <h2>Registration Form</h2>
+             <table border="1">
+                    <tr>
+                        <th><label for="name">Name:</label></th>
+                        <td><input type="text" id="name" name="name" placeholder="Enter your name"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="regno">Reg No:</label></th>
+                        <td><input type="text" id="regno" name="regno" placeholder="Enter your Reg No"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="email">Email:</label></td>
+                        <td><input type="email" id="email" name="email" placeholder="Enter your email"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="age">Age:</label></td>
+                        <td><input type="number" id="age" name="age" placeholder="Enter your age"></td>
+                    </tr>
+                     <tr>
+                    <th>Gender:</th>
+                   <td>
+                    <label for="male"><input type="radio" id="male" name="gender" value="male">Male</label>
+                    <label for="female"><input type="radio" id="female" name="gender" value="female">Female</label>
+                    <label for="other"><input type="radio" id="other" name="gender" value="other">Other</label>
+                     </td>
+                    </tr>
+                 <tr>
+                    <th>Course Type:</th>
+                    <td>
+                    <label for="ug"><input type="radio" id="ug" name="course" value="ug">UG</label>
+                    <label for="pg"><input type="radio" id="pg" name="course" value="pg">PG</label>
+                    </td>
+                    </tr>
+                    <tr>
+                         <td><input type="submit"></td>
+                         <td><input type="reset"></td>
+                    </tr>
+                   
+             </table>
+       </form>
+       </center>
+<script src="script.js"></script>
+       </body>
+</html>
