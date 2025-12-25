@@ -1,0 +1,20 @@
+body {
+    text-align: center;
+    background-image: url("https://smartcampuses.com/wp-content/uploads/revslider/web-agency-home-content/Slide-2-Background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: black;
+}
+
+table {
+    margin: auto;
+}
+
+td {
+    padding: 10px;
+}
+
+input {
+    padding: 5px;
+}

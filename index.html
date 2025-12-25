@@ -1,135 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Web Experiments</title>
-
-  <style>
- 
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-
-    
-      background-color: #f4f6f9;
-    }
-
-
-    header {
-      margin-bottom: 30px;
-    }
-
-    h1 {
-      color: #0f172a;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      color: #475569;
-      font-size: 16px;
-    }
-
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 22px;
-      justify-items: center;
-      margin-top: 30px;
-      padding: 0 10px;
-    }
-    .card {
-      background-color: #ffffff;
-      border-radius: 14px;
-      padding: 20px;
-      width: 100%;
-      max-width: 280px;
-      text-align: left;
-
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-    }
-
-    .card h2 {
-      margin-top: 0;
-      color: #1e293b;
-      font-size: 18px;
-    }
-
-    .card p {
-      color: #475569;
-      margin: 10px 0 14px;
-      font-size: 14px;
-      line-height: 1.5;
-    }
-    a {
-      text-decoration: none;
-      color: #2563eb;
-      font-weight: bold;
-      font-size: 14px;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-    @media (max-width: 480px) {
-      body {
-        padding: 14px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <header>
-    <h1>🚀 My Web Experiments</h1>
-    <p>Welcome! Here are my mini projects built using HTML, CSS, and JavaScript.</p>
-  </header>
-
-  <div class="projects">
-
-    <div class="card">
-      <h2>Colour Change Page</h2>
-      <p>A fun experiment with background color changes.</p>
-      <a href="Colourchangepage/index.html" target="_blank">🔗 View Project</a>
-    </div>
-
-    <div class="card">
-      <h2>Stop Watch Page</h2>
-      <p>A stopwatch with start, pause, and reset features.</p>
-      <a href="Stopwatchweb/index.html" target="_blank">🔗 View Project</a>
-    </div>
-
-    <div class="card">
-      <h2>Course Registration Page</h2>
-      <p>A simple course registration form.</p>
-      <a href="webpages/index.html" target="_blank">🔗 View Project</a>
-    </div>
-
-    <div class="card">
-      <h2>To-Do List</h2>
-      <p>An interactive task tracking and to-do list experiment.</p>
-      <a href="to-do-list/index.html" target="_blank">🔗 View Project</a>
-    </div>
-
-    <div class="card">
-      <h2>Anna University Web</h2>
-      <p>
-        A basic web experiment showcasing an Anna University registration form
-        with HTML, CSS, and JavaScript validation.
-      </p>
-      <a href="#" target="_blank">🔗 View Project</a>
-    </div>
-
-  </div>
-
-</body>
+<html>
+    <head>
+        <title>
+            Student Management System
+        </title>
+        <link rel="stylesheet" href="style.css">
+       
+    </head>
+    <body>
+        <center>
+        <h1>Student Management System</h1>
+       
+          <form>
+            <table >
+                <tr>
+                    <th>Name:</th>
+                    <td><input type="text"  id="name" placeholder="Enter your Name"></td>
+                </tr>
+                <tr>
+                    <th>Roll No:</th>
+                    <td><input type="text" id="rollno" placeholder="Enter your Roll No"></td>
+                </tr>
+             <tr>
+             <th>Gender:</th>
+             <td>
+             <input type="radio" id="male" name="gender" value="Male">
+             <label for="male">Male</label>
+             <input type="radio" id="female" name="gender" value="Female">
+             <label for="female">Female</label>
+             <input type="radio" id="other" name="gender" value="Other">
+             <label for="other">Other</label>
+            </td>
+            </tr>
+            <tr>
+                     <th>Department:</th>
+                     <td><input type="text" id="dept" placeholder="Enter your Department"></td>
+                </tr>
+                <tr>
+                    <th>Marks:</th>
+                    <td><input type="text" id="marks" placeholder="Enter your marks"></td>
+                </tr>
+            </table>
+            <button type="button" onclick="add()">Add Student</button>
+            <button type="button" onclick="update()">Update</button>
+            <button type="button" onclick="display()">Display Students</button>
+            <button type="button" onclick="remove()">Remove </button>
+          </form>
+        </center>
+        <div id="output"></div>
+        <script src="script.js"> </script>
+    </body>
 </html>
