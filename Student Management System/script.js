@@ -6,7 +6,7 @@ function add() {
   let genderip= document.querySelector('input[name="gender"]:checked');
   let marks = document.getElementById("marks").value;
   if (!name || !rollno || !dept || !genderip || !marks) {
-    alert("Please fill in all fields and select gender.");
+    alert("Please fill in all fields and select gender");
     return;
   }
   let obj = {
@@ -17,7 +17,7 @@ function add() {
     marks: marks
   };
   students.push(obj);
-  alert("Student added successfully!");
+  alert("Student added successfully");
   document.querySelector("form").reset();
 }
 function display() {
@@ -42,7 +42,7 @@ for (let s of students) {
 function remove(rollno) {  if (!rollno) {
     rollno = document.getElementById("rollno").value;
     if (!rollno) {
-      alert("Please enter Roll No to remove!");
+      alert("Please enter Roll No to remove");
       return;
     }
   }
@@ -64,7 +64,8 @@ student.department=document.getElementById("dept").value;
 student.marks=document.getElementById("marks").value;
 let genderip=document.querySelector('input[name="gender"]:checked');
 student.gender=genderip?genderip.value:student.gender;
-alert("Student updated successfully!");
+alert("Student updated successfully");
 document.querySelector("form").reset();
 display();
 }
+
