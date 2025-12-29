@@ -1,0 +1,56 @@
+body {
+    font-family: Arial;
+    background-color: lightcoral;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+h1 {
+    text-align: center;
+    color:#2c2c2c;
+}
+table {
+    width: auto;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid black;
+}
+th {
+    background-color: darkcyan;
+    color: white;
+}
+button {
+    margin: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+button.all {
+    background-color: rebeccapurple;
+    color: white;
+}
+button.all:hover {
+    background-color: indigo;
+}
+button.available {
+    background-color: seagreen;
+    color: white;
+}
+button.available:hover {
+    background-color: mediumseagreen;
+}
+button.issued {
+    background-color: crimson;
+    color: white;
+}
+button.issued:hover {
+    background-color: firebrick;
+}
