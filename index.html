@@ -182,16 +182,7 @@ footer {
 
 </style>
 </head>
-<script>
-  const toggleBtn = document.getElementById("themeToggle");
-  toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    toggleBtn.textContent =
-      document.body.classList.contains("dark")
-        ? "☀️ Light Mode"
-        : "🌙 Dark Mode";
-  });
-</script>
+
 
 <body>
 
@@ -258,6 +249,15 @@ footer {
 <footer>
 © 2026 | Nitesh Web Experiments
 </footer>
-
+<script>
+  const toggleBtn = document.getElementById("themeToggle");
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    toggleBtn.textContent =
+      document.body.classList.contains("dark")
+        ? "☀️ Light Mode"
+        : "🌙 Dark Mode";
+  });
+</script>
 </body>
 </html>
