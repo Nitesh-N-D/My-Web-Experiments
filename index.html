@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>My Web Experiments</title>
+<title>Nitesh’s Web Experiments</title>
+
 <style>
 /* ================= THEME VARIABLES ================= */
 :root {
-  --bg-main: #fdf2f2;
   --bg-gradient: linear-gradient(135deg, #fee2e2, #fff5f5);
   --card-bg: #ffffff;
   --primary: #b91c1c;
@@ -19,7 +19,6 @@
 
 /* DARK RED MODE */
 body.dark {
-  --bg-main: #0f0a0a;
   --bg-gradient: linear-gradient(135deg, #1a0b0b, #0f0a0a);
   --card-bg: #1f1212;
   --primary: #ef4444;
@@ -48,6 +47,7 @@ body {
 
 /* ================= HEADER ================= */
 header {
+  position: relative;
   text-align: center;
   padding: 70px 20px 40px;
 }
@@ -63,24 +63,62 @@ header p {
   font-size: 16px;
   color: var(--text-muted);
   max-width: 720px;
-  margin: 0 auto 18px;
+  margin: 0 auto;
 }
 
-/* Toggle Button */
-#themeToggle {
-  padding: 8px 16px;
-  border-radius: 20px;
-  border: 1px solid var(--border-soft);
-  background: transparent;
-  color: var(--primary);
-  font-weight: 600;
+/* ================= THEME SWIPE TOGGLE ================= */
+.theme-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-switch span {
+  font-size: 16px;
+}
+
+.switch {
+  position: relative;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
   cursor: pointer;
-  transition: all 0.25s ease;
+  background: linear-gradient(90deg, #fbbf24, #f97316);
+  border-radius: 999px;
+  transition: background 0.4s ease;
 }
 
-#themeToggle:hover {
-  background: var(--primary);
-  color: #ffffff;
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  top: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.4s ease;
+}
+
+.switch input:checked + .slider {
+  background: linear-gradient(90deg, #7f1d1d, #111827);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(24px);
 }
 
 /* ================= PROJECT GRID ================= */
@@ -174,22 +212,30 @@ footer {
     font-size: 28px;
   }
 
-  .card {
-    padding: 20px;
+  .theme-switch {
+    transform: scale(0.9);
+    top: 14px;
+    right: 14px;
   }
 }
-
-
 </style>
 </head>
-
 
 <body>
 
 <header>
   <h1>🚀 Nitesh’s Web Experiments</h1>
-  <p>Mini projects built using HTML, CSS, XML and JavaScript</p>
-  <button id="themeToggle">🌙 Dark Mode</button>
+  <p>Mini projects built using HTML, CSS, XML, JavaScript & JSON</p>
+
+  <!-- Swipe Toggle -->
+  <div class="theme-switch">
+    <span>☀️</span>
+    <label class="switch">
+      <input type="checkbox" id="themeToggle">
+      <span class="slider"></span>
+    </label>
+    <span>🌙</span>
+  </div>
 </header>
 
 <div class="projects-container">
@@ -221,25 +267,25 @@ footer {
 
 <div class="card">
   <h2>Anna University Web Page</h2>
-  <p>A fun web experiment showcasing basic information about Anna University with simple HTML styling.</p>
+  <p>A fun web experiment showcasing basic information about Anna University.</p>
   <a href="Anna%20University/index.html" target="_blank">🔗 View Project</a>
 </div>
 
 <div class="card">
   <h2>Student Management System</h2>
-  <p>A cheerful mini project that manages student records with a clean and interactive interface.</p>
+  <p>A cheerful mini project that manages student records.</p>
   <a href="Student%20Management%20System/index.html" target="_blank">🔗 View Project</a>
 </div>
 
 <div class="card">
   <h2>Library Record Management</h2>
-  <p>A delightful web experiment that makes library record management smooth and engaging.</p>
+  <p>A delightful web experiment for managing library records.</p>
   <a href="Library%20Record%20Management/index.html" target="_blank">🔗 View Project</a>
 </div>
 
 <div class="card">
   <h2>Employee Record Management</h2>
-  <p>A professional web application to manage employee records with view, add, and delete operations using JavaScript and JSON.</p>
+  <p>Employee management system using JavaScript and JSON.</p>
   <a href="Employee%20Record%20Management/index.html" target="_blank">🔗 View Project</a>
 </div>
 
@@ -249,15 +295,13 @@ footer {
 <footer>
 © 2026 | Nitesh Web Experiments
 </footer>
+
 <script>
-  const toggleBtn = document.getElementById("themeToggle");
-  toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-    toggleBtn.textContent =
-      document.body.classList.contains("dark")
-        ? "☀️ Light Mode"
-        : "🌙 Dark Mode";
+  const toggle = document.getElementById("themeToggle");
+  toggle.addEventListener("change", () => {
+    document.body.classList.toggle("dark", toggle.checked);
   });
 </script>
+
 </body>
 </html>
