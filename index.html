@@ -5,16 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>My Web Experiments</title>
 <style>
-  /* ================= ROOT THEME ================= */
+/* ================= THEME VARIABLES ================= */
 :root {
-  --primary-red: #b91c1c;       /* deep red */
-  --secondary-red: #dc2626;     /* bright red */
-  --soft-red: #fee2e2;          /* light red background */
-  --bg-main: #fdf2f2;           /* page background */
+  --bg-main: #fdf2f2;
+  --bg-gradient: linear-gradient(135deg, #fee2e2, #fff5f5);
   --card-bg: #ffffff;
-  --text-dark: #1f2937;
+  --primary: #b91c1c;
+  --secondary: #dc2626;
+  --text-main: #1f2937;
   --text-muted: #6b7280;
-  --radius: 14px;
+  --border-soft: #fecaca;
+}
+
+/* DARK RED MODE */
+body.dark {
+  --bg-main: #0f0a0a;
+  --bg-gradient: linear-gradient(135deg, #1a0b0b, #0f0a0a);
+  --card-bg: #1f1212;
+  --primary: #ef4444;
+  --secondary: #dc2626;
+  --text-main: #f9fafb;
+  --text-muted: #d1d5db;
+  --border-soft: #7f1d1d;
 }
 
 /* ================= GLOBAL ================= */
@@ -27,11 +39,11 @@ html {
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, var(--soft-red), var(--bg-main));
-  color: var(--text-dark);
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* ================= HEADER ================= */
@@ -43,22 +55,38 @@ header {
 header h1 {
   font-size: 36px;
   font-weight: 800;
+  color: var(--primary);
   margin-bottom: 10px;
-  letter-spacing: -0.5px;
-  color: var(--primary-red);
 }
 
 header p {
   font-size: 16px;
   color: var(--text-muted);
   max-width: 720px;
-  margin: 0 auto;
+  margin: 0 auto 18px;
 }
 
-/* ================= CONTAINER ================= */
+/* Toggle Button */
+#themeToggle {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--border-soft);
+  background: transparent;
+  color: var(--primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+#themeToggle:hover {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+/* ================= PROJECT GRID ================= */
 .projects-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: auto;
   padding: 20px;
 }
 
@@ -71,15 +99,13 @@ header p {
 /* ================= CARD ================= */
 .card {
   background-color: var(--card-bg);
-  border-radius: var(--radius);
+  border-radius: 16px;
   padding: 24px;
   position: relative;
-  box-shadow: 0 10px 25px rgba(185, 28, 28, 0.15);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
   transition: transform 0.35s ease, box-shadow 0.35s ease;
-  overflow: hidden;
 }
 
-/* Top accent */
 .card::before {
   content: "";
   position: absolute;
@@ -87,23 +113,20 @@ header p {
   left: 0;
   height: 6px;
   width: 100%;
-  border-radius: var(--radius) var(--radius) 0 0;
-  background: linear-gradient(90deg, var(--primary-red), var(--secondary-red));
+  border-radius: 16px 16px 0 0;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
 }
 
 .card:hover {
   transform: translateY(-10px) scale(1.02);
-  box-shadow:
-    0 20px 40px rgba(185, 28, 28, 0.25),
-    0 0 0 1px rgba(185, 28, 28, 0.2);
+  box-shadow: 0 22px 45px rgba(239, 68, 68, 0.35);
 }
 
-/* ================= CARD CONTENT ================= */
 .card h2 {
   margin-top: 14px;
   font-size: 18px;
   font-weight: 700;
-  color: var(--primary-red);
+  color: var(--primary);
 }
 
 .card p {
@@ -113,7 +136,7 @@ header p {
   margin: 10px 0 16px;
 }
 
-/* ================= LINK / BUTTON ================= */
+/* ================= BUTTON ================= */
 .card a {
   display: inline-flex;
   align-items: center;
@@ -123,20 +146,16 @@ header p {
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  color: var(--primary-red);
-  background-color: rgba(185, 28, 28, 0.08);
-  transition:
-    background-color 0.25s ease,
-    color 0.25s ease,
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
+  color: var(--primary);
+  background-color: rgba(239, 68, 68, 0.12);
+  transition: all 0.25s ease;
 }
 
 .card a:hover {
-  background: linear-gradient(90deg, var(--primary-red), var(--secondary-red));
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
   color: #ffffff;
   transform: translateX(5px);
-  box-shadow: 0 8px 18px rgba(185, 28, 28, 0.4);
+  box-shadow: 0 8px 18px rgba(239, 68, 68, 0.5);
 }
 
 /* ================= FOOTER ================= */
@@ -145,8 +164,8 @@ footer {
   padding: 35px 10px;
   font-size: 14px;
   color: var(--text-muted);
-  border-top: 1px solid #fca5a5;
-  background-color: #fff5f5;
+  border-top: 1px solid var(--border-soft);
+  background-color: rgba(0,0,0,0.03);
 }
 
 /* ================= MOBILE ================= */
@@ -160,14 +179,26 @@ footer {
   }
 }
 
+
 </style>
 </head>
+<script>
+  const toggleBtn = document.getElementById("themeToggle");
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+    toggleBtn.textContent =
+      document.body.classList.contains("dark")
+        ? "☀️ Light Mode"
+        : "🌙 Dark Mode";
+  });
+</script>
 
 <body>
 
 <header>
-  <h1>🚀 My Web Experiments</h1>
+  <h1>🚀 Nitesh’s Web Experiments</h1>
   <p>Mini projects built using HTML, CSS, XML and JavaScript</p>
+  <button id="themeToggle">🌙 Dark Mode</button>
 </header>
 
 <div class="projects-container">
@@ -225,7 +256,7 @@ footer {
 </div>
 
 <footer>
-© 2025 | Nitesh Web Experiments
+© 2026 | Nitesh Web Experiments
 </footer>
 
 </body>
