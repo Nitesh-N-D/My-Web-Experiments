@@ -4,93 +4,162 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>My Web Experiments</title>
-
 <style>
+  /* ================= ROOT THEME ================= */
+:root {
+  --primary-red: #b91c1c;       /* deep red */
+  --secondary-red: #dc2626;     /* bright red */
+  --soft-red: #fee2e2;          /* light red background */
+  --bg-main: #fdf2f2;           /* page background */
+  --card-bg: #ffffff;
+  --text-dark: #1f2937;
+  --text-muted: #6b7280;
+  --radius: 14px;
+}
+
+/* ================= GLOBAL ================= */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f6f9;
-  color: #1e293b;
+  background: linear-gradient(135deg, var(--soft-red), var(--bg-main));
+  color: var(--text-dark);
 }
+
+/* ================= HEADER ================= */
 header {
   text-align: center;
-  padding: 40px 20px 20px;
+  padding: 70px 20px 40px;
 }
+
 header h1 {
-  font-size: 32px;
-  margin-bottom: 8px;
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+  color: var(--primary-red);
 }
+
 header p {
-  color: #475569;
   font-size: 16px;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: 0 auto;
 }
+
+/* ================= CONTAINER ================= */
 .projects-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 24px;
+  gap: 26px;
 }
+
+/* ================= CARD ================= */
 .card {
-  background-color: #ffffff;
-  border-radius: 14px;
-  padding: 22px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  background-color: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 24px;
   position: relative;
+  box-shadow: 0 10px 25px rgba(185, 28, 28, 0.15);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
 }
+
+/* Top accent */
 .card::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   height: 6px;
-  border-radius: 14px 14px 0 0;
-  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  width: 100%;
+  border-radius: var(--radius) var(--radius) 0 0;
+  background: linear-gradient(90deg, var(--primary-red), var(--secondary-red));
 }
+
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+  transform: translateY(-10px) scale(1.02);
+  box-shadow:
+    0 20px 40px rgba(185, 28, 28, 0.25),
+    0 0 0 1px rgba(185, 28, 28, 0.2);
 }
+
+/* ================= CARD CONTENT ================= */
 .card h2 {
   margin-top: 14px;
   font-size: 18px;
-  color: #0f172a;
+  font-weight: 700;
+  color: var(--primary-red);
 }
+
 .card p {
-  font-size: 14px;
-  color: #475569;
-  line-height: 1.6;
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.7;
   margin: 10px 0 16px;
 }
+
+/* ================= LINK / BUTTON ================= */
 .card a {
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  color: #2563eb;
+  color: var(--primary-red);
+  background-color: rgba(185, 28, 28, 0.08);
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
+
 .card a:hover {
-  text-decoration: underline;
+  background: linear-gradient(90deg, var(--primary-red), var(--secondary-red));
+  color: #ffffff;
+  transform: translateX(5px);
+  box-shadow: 0 8px 18px rgba(185, 28, 28, 0.4);
 }
+
+/* ================= FOOTER ================= */
 footer {
   text-align: center;
-  padding: 30px 10px;
+  padding: 35px 10px;
   font-size: 14px;
-  color: #64748b;
+  color: var(--text-muted);
+  border-top: 1px solid #fca5a5;
+  background-color: #fff5f5;
 }
+
+/* ================= MOBILE ================= */
 @media (max-width: 480px) {
   header h1 {
-    font-size: 26px;
+    font-size: 28px;
+  }
+
+  .card {
+    padding: 20px;
   }
 }
+
 </style>
 </head>
 
