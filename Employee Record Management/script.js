@@ -40,7 +40,7 @@ function viewDetails(id) {
 }
 document.getElementById("addForm").addEventListener("submit", function (e) {
   e.preventDefault();
-  confirm("Are you sure you want to add this employee?")
+  if (!confirm("Are you sure you want to add this employee?")) return;
   const newEmployee = {
     id: parseInt(document.getElementById("id").value),
     name: document.getElementById("name").value,
@@ -58,7 +58,6 @@ document.getElementById("addForm").addEventListener("submit", function (e) {
   displayEmployees();
   e.target.reset();
 });
- 
 function deleteEmployee(id) {
   if (confirm("Are you sure you want to delete this employee?")) {
     employees = employees.filter(emp => emp.id !== id);
