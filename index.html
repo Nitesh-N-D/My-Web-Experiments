@@ -3,125 +3,92 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Nitesh’s Web Experiments</title>
+<title>My Web Experiments</title>
 
 <style>
-:root {
-  --primary: #2563eb;
-  --secondary: #6366f1;
-  --bg: #f4f6fb;
-  --card: #ffffff;
-  --text-dark: #0f172a;
-  --text-muted: #475569;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: radial-gradient(circle at top, #eef2ff, var(--bg));
-  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  background-color: #f4f6f9;
+  color: #1e293b;
 }
-
-/* HEADER */
 header {
   text-align: center;
-  padding: 80px 20px 50px;
+  padding: 40px 20px 20px;
 }
-
 header h1 {
-  font-size: 40px;
-  font-weight: 800;
-  margin-bottom: 10px;
+  font-size: 32px;
+  margin-bottom: 8px;
 }
-
 header p {
+  color: #475569;
   font-size: 16px;
-  color: var(--text-muted);
 }
-
-/* PROJECT GRID */
 .projects-container {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   padding: 20px;
 }
-
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+  gap: 24px;
 }
-
-/* CARD */
 .card {
-  background: var(--card);
-  border-radius: 18px;
-  padding: 26px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
-  transition: transform .35s ease, box-shadow .35s ease;
 }
-
 .card::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  height: 6px;
   width: 100%;
-  border-radius: 18px 18px 0 0;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  height: 6px;
+  border-radius: 14px 14px 0 0;
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
 }
-
 .card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.18);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
 }
-
 .card h2 {
   margin-top: 14px;
-  font-size: 19px;
+  font-size: 18px;
+  color: #0f172a;
 }
-
 .card p {
-  font-size: 14.5px;
-  line-height: 1.7;
-  color: var(--text-muted);
+  font-size: 14px;
+  color: #475569;
+  line-height: 1.6;
+  margin: 10px 0 16px;
 }
-
-/* BUTTON */
 .card a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 16px;
-  border-radius: 10px;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
   font-weight: 600;
   text-decoration: none;
-  transition: transform .25s ease, box-shadow .25s ease;
+  color: #2563eb;
 }
-
 .card a:hover {
-  transform: translateX(6px);
-  box-shadow: 0 8px 18px rgba(37,99,235,0.4);
+  text-decoration: underline;
 }
-
-/* FOOTER */
 footer {
   text-align: center;
-  padding: 40px 10px;
+  padding: 30px 10px;
   font-size: 14px;
-  color: var(--text-muted);
+  color: #64748b;
 }
-
 @media (max-width: 480px) {
   header h1 {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 </style>
@@ -130,66 +97,66 @@ footer {
 <body>
 
 <header>
-  <h1>🚀 Nitesh’s Web Experiments</h1>
-  <p>Mini projects built using HTML, CSS, JavaScript, XML & JSON</p>
+  <h1>🚀 My Web Experiments</h1>
+  <p>Mini projects built using HTML, CSS, XML and JavaScript</p>
 </header>
 
 <div class="projects-container">
-  <div class="projects">
+<div class="projects">
 
-    <div class="card">
-      <h2>Colour Change Page</h2>
-      <p>Dynamic background color changes using JavaScript.</p>
-      <a href="./colour-change-page/index.html" target="_blank">View Project</a>
-    </div>
+<div class="card">
+  <h2>Colour Change Page</h2>
+  <p>A fun experiment demonstrating dynamic background color changes.</p>
+  <a href="Colour%20Change%20Page/index.html" target="_blank">🔗 View Project</a>
+</div>
 
-    <div class="card">
-      <h2>Stop Watch Page</h2>
-      <p>A stopwatch with start, pause, and reset features.</p>
-      <a href="./stop-watch-web/index.html" target="_blank">View Project</a>
-    </div>
+<div class="card">
+  <h2>Stop Watch Page</h2>
+  <p>A stopwatch application with start, pause, and reset features.</p>
+  <a href="Stop%20Watch%20Web/index.html" target="_blank">🔗 View Project</a>
+</div>
 
-    <div class="card">
-      <h2>Course Registration Page</h2>
-      <p>Simple course registration form using HTML & CSS.</p>
-      <a href="./web-pages/index.html" target="_blank">View Project</a>
-    </div>
+<div class="card">
+  <h2>Course Registration Page</h2>
+  <p>A simple course registration form using HTML and CSS.</p>
+  <a href="Web%20Pages/index.html" target="_blank">🔗 View Project</a>
+</div>
 
-    <div class="card">
-      <h2>To-Do List</h2>
-      <p>Interactive task tracking and to-do list.</p>
-      <a href="./to-do-list/index.html" target="_blank">View Project</a>
-    </div>
+<div class="card">
+  <h2>To-Do List</h2>
+  <p>An interactive task tracking and to-do list experiment.</p>
+  <a href="to-do-list/index.html" target="_blank">🔗 View Project</a>
+</div>
 
-    <div class="card">
-      <h2>Anna University Web Page</h2>
-      <p>Basic information page with clean HTML styling.</p>
-      <a href="Anna University/index.html" target="_blank">View Project</a>
-    </div>
+<div class="card">
+  <h2>Anna University Web Page</h2>
+  <p>A fun web experiment showcasing basic information about Anna University with simple HTML styling.</p>
+  <a href="Anna%20University/index.html" target="_blank">🔗 View Project</a>
+</div>
 
-    <div class="card">
-      <h2>Student Management System</h2>
-      <p>Manage student records using JavaScript.</p>
-      <a href="Student Management System/index.html" target="_blank">View Project</a>
-    </div>
+<div class="card">
+  <h2>Student Management System</h2>
+  <p>A cheerful mini project that manages student records with a clean and interactive interface.</p>
+  <a href="Student%20Management%20System/index.html" target="_blank">🔗 View Project</a>
+</div>
 
-    <div class="card">
-      <h2>Library Record Management</h2>
-      <p>Library record handling with structured data.</p>
-      <a href="Library Record Management/index.html" target="_blank">View Project</a>
-    </div>
+<div class="card">
+  <h2>Library Record Management</h2>
+  <p>A delightful web experiment that makes library record management smooth and engaging.</p>
+  <a href="Library%20Record%20Management/index.html" target="_blank">🔗 View Project</a>
+</div>
 
-    <div class="card">
-      <h2>Employee Record Management</h2>
-      <p>CRUD-based employee management using JavaScript & JSON.</p>
-      <a href="Employee Record Management/index.html" target="_blank">View Project</a>
-    </div>
+<div class="card">
+  <h2>Employee Record Management</h2>
+  <p>A professional web application to manage employee records with view, add, and delete operations using JavaScript and JSON.</p>
+  <a href="Employee%20Record%20Management/index.html" target="_blank">🔗 View Project</a>
+</div>
 
-  </div>
+</div>
 </div>
 
 <footer>
-  © 2025 | Nitesh Web Experiments
+© 2025 | Nitesh Web Experiments
 </footer>
 
 </body>
