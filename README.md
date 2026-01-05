@@ -48,7 +48,7 @@ The projects are designed to be clean, readable, and beginner-friendly while gra
 
 ## 🌐 Live Demo
 
-👉 https://nitesh-n-d.github.io/My-Web-Experiments/
+👉 **https://nitesh-n-d.github.io/My-Web-Experiments/**
 
 ## 📌 Purpose
 
