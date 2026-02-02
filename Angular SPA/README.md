@@ -1,4 +1,4 @@
-# Experiment 7 – Angular Single Page Application (SPA)
+# Angular Single Page Application (SPA)
 
 ## Title
 Creation of a Simple Single Page Application Using Angular Components and Data Binding
@@ -75,17 +75,18 @@ Navigation between these pages is handled using **Angular Routing**, ensuring th
 
 ---
 
-## Folder Structure (Important Files)
+## Folder Structure
 
 src/
 ├── app/
-│ ├── home/
-│ ├── student/
-│ ├── app.ts
-│ ├── app.html
-│ └── app.routes.ts
+│   ├── home/
+│   ├── student/
+│   ├── app.ts
+│   ├── app.html
+│   └── app.routes.ts
 ├── styles.css
 └── main.ts
+
 ---
 
 ## How the SPA Works
