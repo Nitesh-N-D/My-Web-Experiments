@@ -77,6 +77,7 @@ Navigation between these pages is handled using **Angular Routing**, ensuring th
 
 ## Folder Structure
 
+```text
 src/
 ├── app/
 │   ├── home/
@@ -87,7 +88,6 @@ src/
 ├── styles.css
 └── main.ts
 
----
 
 ## How the SPA Works
 1. The application loads the Home component by default.
