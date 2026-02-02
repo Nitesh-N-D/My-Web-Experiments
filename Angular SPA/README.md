@@ -101,6 +101,7 @@ This experiment demonstrates how Angular can be used to build a simple yet effec
 
 ## Folder Structure
 
+'''text
 src/
 ├── app/
 │   ├── home/
