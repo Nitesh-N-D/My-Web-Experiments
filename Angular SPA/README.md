@@ -76,20 +76,6 @@ Navigation between these pages is handled using **Angular Routing**, ensuring th
 ---
 
 
-## Folder Structure
-
-```text
-src/
-├── app/
-│   ├── home/
-│   ├── student/
-│   ├── app.ts
-│   ├── app.html
-│   └── app.routes.ts
-├── styles.css
-└── main.ts
-
-'''text
 
 ## How the SPA Works
 1. The application loads the Home component by default.
@@ -112,3 +98,15 @@ src/
 This experiment demonstrates how Angular can be used to build a simple yet effective Single Page Application using components and data binding. It helps in understanding the core concepts of modern front-end web development.
 
 ---
+
+## Folder Structure
+
+src/
+├── app/
+│   ├── home/
+│   ├── student/
+│   ├── app.ts
+│   ├── app.html
+│   └── app.routes.ts
+├── styles.css
+└── main.ts
