@@ -1,154 +1,116 @@
-Angular Single Page Application (SPA)
-📌 Title
+# Angular Single Page Application (SPA)
 
-Creation of a Simple Single Page Application Using Angular Components and Data Binding
+## 📌 Title
+**Creation of a Simple Single Page Application Using Angular Components and Data Binding**
 
-📖 Description
+---
 
-This project is a Single Page Application (SPA) developed using the Angular framework.
-It demonstrates the fundamental concepts of Angular such as components, routing, data binding, and directives to build a dynamic web application that operates without full page reloads.
+## 📖 Description
+This project is a **Single Page Application (SPA)** developed using the **Angular framework**.  
+It demonstrates the core concepts of Angular such as **components, routing, data binding, and directives** to build a dynamic web application that works without full page reloads.
 
-The application consists of multiple components that interact seamlessly through Angular routing, ensuring smooth navigation and real-time UI updates.
+The application ensures smooth navigation and real-time updates, making it a practical example of modern front-end development using Angular.
 
-🎯 Objective
+---
 
-To understand the basic structure of an Angular application
+## 🎯 Objective
+- To understand the structure of an Angular application  
+- To create and use multiple Angular components  
+- To implement data binding techniques in Angular  
+- To demonstrate Single Page Application behavior using Angular routing  
 
-To create and manage multiple Angular components
+---
 
-To implement different types of data binding
+## 🧩 Application Overview
+The application consists of **two main pages**:
+1. **Home Page**
+2. **Student Page**
 
-To demonstrate Single Page Application behavior using Angular routing
+Navigation between these pages is handled using **Angular Router**, ensuring SPA behavior without browser refresh.
 
-🧩 Application Overview
+---
 
-The application contains two main pages:
+## ✨ Features of the Application
 
-Home Page
+### 🏠 Home Page
+- Acts as the default landing page  
+- Displays a welcome message  
+- Provides navigation to the Student page  
 
-Student Page
+### 🎓 Student Page
+- Allows users to enter **student name** and **department**
+- Uses **two-way data binding** to capture user input
+- Uses a **Submit button** to add student details
+- Displays **multiple student records dynamically**
+- Uses **event binding** and **structural directives**
+- Allows navigation back to the Home page  
 
-Navigation between these pages is handled using Angular Router, ensuring that content updates dynamically without refreshing the browser.
+---
 
-✨ Features of the Application
-🏠 Home Page
+## 🛠️ Angular Concepts Used
 
-Acts as the default landing page
+### 🔹 Components
+- **App Component** – Root component managing layout and navigation  
+- **Home Component** – Displays the home page  
+- **Student Component** – Manages student data and interactions  
 
-Displays a welcome message
+### 🔹 Data Binding
+- **Interpolation (`{{ }}`)** – Displays dynamic data  
+- **Two-way Data Binding (`[(ngModel)]`)** – Captures user input  
+- **Event Binding (`(click)`)** – Handles button actions  
 
-Provides navigation to the Student page
+### 🔹 Directives
+- **`*ngFor`** – Displays multiple student records dynamically  
 
-🎓 Student Page
+### 🔹 Routing
+- Angular Router is used to navigate between pages  
+- Ensures smooth SPA navigation without page reload  
 
-Accepts student name and department as input
+---
 
-Uses two-way data binding to capture user input
+## 🧰 Technologies Used
+- Angular  
+- TypeScript  
+- HTML  
+- CSS  
+- Node.js  
+- npm  
 
-Adds student details using a Submit button
+---
 
-Displays multiple student records dynamically
+## 🔄 How the SPA Works
+1. The application loads the **Home Component** by default.  
+2. User navigates to the **Student Page** using Angular routing.  
+3. User enters student details in input fields.  
+4. On clicking **Submit**, the student data is added to a list.  
+5. The list updates dynamically without reloading the page.  
+6. Navigation between pages happens smoothly as a Single Page Application.  
 
-Implements event binding and structural directives
+---
 
-Allows navigation back to the Home page
+## Outcome
+- Successfully implemented an Angular Single Page Application
+- Demonstrated components, routing, and data binding
+- Achieved dynamic UI updates without page refresh
 
-🛠️ Angular Concepts Used
-🔹 Components
+---
 
-App Component – Root component that manages layout and routing
+## Conclusion
+This experiment demonstrates how Angular can be used to build a simple yet effective Single Page Application using components and data binding. It helps in understanding the core concepts of modern front-end web development.
 
-Home Component – Displays the home page content
+---
 
-Student Component – Handles student input and data display
+## 📁 Folder Structure
 
-🔹 Data Binding
 
-Interpolation ({{ }}) – Displays dynamic data in the UI
-
-Two-way Data Binding ([(ngModel)]) – Synchronizes input fields with component data
-
-Event Binding ((click)) – Handles user interactions
-
-🔹 Directives
-
-*ngFor – Displays multiple student records dynamically
-
-🔹 Routing
-
-Angular Router enables navigation between pages
-
-Ensures SPA behavior without browser refresh
-
-🧰 Technologies Used
-
-Angular
-
-TypeScript
-
-HTML
-
-CSS
-
-Node.js
-
-npm
-
-🔄 How the SPA Works
-
-The application loads the Home Component by default.
-
-User navigates to the Student Page using Angular routing.
-
-User enters student details in input fields.
-
-On clicking Submit, the data is added to a list.
-
-The student list updates dynamically without page reload.
-
-Navigation between pages occurs smoothly as a Single Page Application.
-
-📁 Folder Structure
+```text
 src/
 ├── app/
 │   ├── home/
-│   │   ├── home.component.ts
-│   │   ├── home.component.html
-│   │   └── home.component.css
 │   ├── student/
-│   │   ├── student.component.ts
-│   │   ├── student.component.html
-│   │   └── student.component.css
-│   ├── app.component.ts
-│   ├── app.component.html
+│   ├── app.ts
+│   ├── app.html
 │   └── app.routes.ts
 ├── styles.css
 └── main.ts
 
-🚀 How to Run the Project
-Prerequisites
-
-Node.js installed
-
-Angular CLI installed
-
-Steps
-npm install
-ng serve
-
-
-Open your browser and navigate to:
-
-http://localhost:4200/
-
-✅ Outcome
-
-Successfully implemented an Angular Single Page Application
-
-Demonstrated Angular components, routing, and data binding
-
-Achieved dynamic UI updates without page refresh
-
-🧠 Conclusion
-
-This project demonstrates how Angular can be used to build a simple yet effective Single Page Application using components, routing, and data binding. It provides a strong foundation for understanding modern front-end web development concepts.
