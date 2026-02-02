@@ -1,0 +1,40 @@
+.student-container {
+  max-width: 400px;
+  margin: 60px auto;   /* centers horizontally */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+input {
+  padding: 6px;
+  width: 90%;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 6px 14px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-right: 6px;
+}
+
+button:hover {
+  background-color: #005f99;
+}
+
+.home-btn {
+  background-color: #555;
+}
+
+.home-btn:hover {
+  background-color: #333;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
