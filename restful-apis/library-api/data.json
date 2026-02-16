@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Harry Potter",
+    "author": "J.K.Rowling",
+    "available": true
+  },
+  {
+    "id": 2,
+    "title": "Introduction to Algorithms",
+    "author": "Thomas",
+    "available": true
+  }
+]
