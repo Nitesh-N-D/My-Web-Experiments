@@ -46,15 +46,20 @@ function ExpenseForm({
     setAmount("");
     setDate("");
   }
-
- return (
+return (
   <form
     onSubmit={handleSubmit}
-    className="border border-gray-300 p-4 mb-6"
+    className="bg-gray-50 border border-gray-300 p-5 mb-6 shadow-sm"
   >
+    
+   
+    <h3 className="text-sm font-semibold text-gray-900 mb-4">
+      {editingExpense ? "Edit Expense" : "Add New Expense"}
+    </h3>
+
     <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
       <input
-        className="border border-gray-300 p-2"
+        className="bg-white border border-gray-300 p-2 text-sm focus:outline-none focus:ring-1 focus:ring-red-500"
         placeholder="Expense Title"
         value={title}
         onChange={(e) => setTitle(e.target.value)}
@@ -62,7 +67,7 @@ function ExpenseForm({
       />
 
       <input
-        className="border border-gray-300 p-2"
+        className="bg-white border border-gray-300 p-2 text-sm focus:outline-none focus:ring-1 focus:ring-red-500"
         type="number"
         placeholder="Amount"
         value={amount}
@@ -71,7 +76,7 @@ function ExpenseForm({
       />
 
       <input
-        className="border border-gray-300 p-2"
+        className="bg-white border border-gray-300 p-2 text-sm focus:outline-none focus:ring-1 focus:ring-red-500"
         type="date"
         value={date}
         onChange={(e) => setDate(e.target.value)}
@@ -80,7 +85,7 @@ function ExpenseForm({
     </div>
 
     <button
-      className="mt-4 border border-gray-800 px-4 py-2 text-sm text-gray-700"
+      className="mt-4 px-5 py-2 text-sm font-medium text-white bg-red-600 hover:bg-red-700 transition"
     >
       {editingExpense ? "Update Expense" : "Add Expense"}
     </button>
