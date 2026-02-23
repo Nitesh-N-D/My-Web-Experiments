@@ -9,24 +9,32 @@ function Dashboard() {
     navigate("/login");
   }
 
-  return (
-    <div>
-   
-      <div className="flex justify-between items-center p-4 bg-white shadow mb-6">
-        <h2 className="text-xl font-bold">Expense Tracker</h2>
+ return (
+  <div className="min-h-screen bg-gray-100">
+    
 
-        <button
-          onClick={handleLogout}
-          className="text-red-600 font-medium hover:underline"
-        >
-          Logout
-        </button>
-      </div>
+    <div className="flex justify-between items-center px-6 py-4 bg-white border-b border-gray-200">
+      
 
-     
+      <h2 className="text-lg font-semibold text-gray-900">
+        Expense<span className="text-red-600">Flow</span>
+      </h2>
+
+  
+      <button
+        onClick={handleLogout}
+        className="text-sm text-gray-600 hover:text-red-600 transition"
+      >
+        Logout
+      </button>
+    </div>
+
+
+    <div className="max-w-4xl mx-auto p-6">
       <App />
     </div>
-  );
+  </div>
+);
 }
 
 export default Dashboard;
