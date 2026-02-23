@@ -6,17 +6,17 @@ function ExpenseList({ expenses, setExpenses, setEditingExpense }) {
   }
 
   return (
-    <ul className="space-y-2">
-      {expenses.map((expense) => (
-        <ExpenseItem
-          key={expense.id}
-          expense={expense}
-          setExpenses={setExpenses}
-          setEditingExpense={setEditingExpense}
-        />
-      ))}
-    </ul>
-  );
+  <ul className="bg-white border border-gray-300 divide-y divide-gray-200 shadow-sm">
+    {expenses.map((expense) => (
+      <ExpenseItem
+        key={expense.id}
+        expense={expense}
+        setExpenses={setExpenses}
+        setEditingExpense={setEditingExpense}
+      />
+    ))}
+  </ul>
+);
 }
 
 export default ExpenseList;
