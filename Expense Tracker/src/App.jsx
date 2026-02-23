@@ -56,12 +56,13 @@ function App() {
         setExpenses={setExpenses}
         setEditingExpense={setEditingExpense}
       />
-
-  <div className="mt-4 text-sm text-right">
-  <span className="mr-1">Total Expense:</span>
-  <span className="font-semibold">
-    ₹{total}
-  </span>
+<div className="mt-6 pt-4 border-t border-gray-300 flex justify-end">
+  <div className="text-sm text-gray-700">
+    <span className="mr-2">Total Expense</span>
+    <span className="font-semibold text-red-600">
+      ₹{total}
+    </span>
+  </div>
 </div>
 </div>
   );
