@@ -26,7 +26,7 @@ function Login() {
 return (
   <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
     
-    {/* Brand / Title (OUTSIDE box) */}
+
     <div className="text-center mb-8">
       <h1 className="text-3xl font-bold text-gray-900">
         Expense<span className="text-red-600">Flow</span>
@@ -36,7 +36,6 @@ return (
       </p>
     </div>
 
-    {/* Login Box (ONLY login UI) */}
     <div className="w-80 bg-white border border-gray-200 p-6 shadow-md">
       <h2 className="text-sm font-medium text-gray-700 mb-4 text-center">
         Sign in to your account
