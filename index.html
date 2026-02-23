@@ -50,6 +50,14 @@
       margin: 0 auto;
     }
 
+    .section-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 40px 0 20px;
+      text-align: center;
+    }
+
     .projects-container {
       max-width: 1200px;
       margin: auto;
@@ -80,6 +88,24 @@
       width: 100%;
       border-radius: 16px 16px 0 0;
       background: linear-gradient(90deg, var(--primary), var(--secondary));
+    }
+
+    .card.featured {
+      border: 2px solid var(--secondary);
+      background: linear-gradient(180deg, #fff5f5, #ffffff);
+    }
+
+    .card.featured::after {
+      content: "⭐ Featured";
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: var(--secondary);
+      color: white;
+      font-size: 12px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 600;
     }
 
     .card:hover {
@@ -143,10 +169,31 @@
 
   <header>
     <h1>🚀 Nitesh’s Web Experiments</h1>
-    <p>Mini projects built using HTML, CSS, JavaScript & JSON</p>
+    <p>A collection of mini web projects using HTML, CSS, JavaScript & Angular</p>
   </header>
 
   <div class="projects-container">
+
+    <!-- FEATURED PROJECTS -->
+    <h2 class="section-title">🌟 Featured Projects</h2>
+    <div class="projects">
+
+      <div class="card featured">
+        <h2>Student SPA (Angular)</h2>
+        <p>An Angular Single Page Application deployed on Vercel with routing and production build.</p>
+        <a href="https://student-spa.vercel.app/" target="_blank">🔗 View App</a>
+      </div>
+
+      <div class="card featured">
+        <h2>Expense Tracker</h2>
+        <p>A client-side expense tracker application deployed on Vercel.</p>
+        <a href="https://expense-tracker-psi-smoky.vercel.app/" target="_blank">🔗 View App</a>
+      </div>
+
+    </div>
+
+    <!-- OTHER PROJECTS -->
+    <h2 class="section-title">🧪 Other Web Experiments</h2>
     <div class="projects">
 
       <div class="card">
