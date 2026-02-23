@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>
+            Student Management System
+        </title>
+        <link rel="stylesheet" href="style.css">
+       
+    </head>
+    <body>
+        <center>
+        <h1>Student Management System</h1>
+       
+          <form>
+            <table >
+                <tr>
+                    <th>Name:</th>
+                    <td><input type="text"  id="name" placeholder="Enter your Name"></td>
+                </tr>
+                <tr>
+                    <th>Roll No:</th>
+                    <td><input type="text" id="rollno" placeholder="Enter your Roll No"></td>
+                </tr>
+             <tr>
+             <th>Gender:</th>
+             <td>
+             <input type="radio" id="male" name="gender" value="Male">
+             <label for="male">Male</label>
+             <input type="radio" id="female" name="gender" value="Female">
+             <label for="female">Female</label>
+             <input type="radio" id="other" name="gender" value="Other">
+             <label for="other">Other</label>
+            </td>
+            </tr>
+            <tr>
+                     <th>Department:</th>
+                     <td><input type="text" id="dept" placeholder="Enter your Department"></td>
+                </tr>
+                <tr>
+                    <th>Marks:</th>
+                    <td><input type="text" id="marks" placeholder="Enter your marks"></td>
+                </tr>
+            </table>
+            <button type="button" onclick="add()">Add Student</button>
+            <button type="button" onclick="update()">Update</button>
+            <button type="button" onclick="display()">Display Students</button>
+            <button type="button" onclick="remove()">Remove </button>
+          </form>
+        </center>
+        <div id="output"></div>
+        <script src="script.js"> </script>
+    </body>
+</html>

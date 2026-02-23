@@ -1,0 +1,32 @@
+{
+  "employees":[
+    {
+      "id":1,
+      "name":"Nitesh",
+      "department":"CSE",
+      "designation":"Software Engineer",
+      "salary":70000,
+      "email":"nitesh123@gmail.com",
+      "phone":7418501292
+    },
+    {
+      "id":2,
+      "name":"Kavi",
+      "department":"IT",
+      "designation": "Manager",
+      "salary":90000,
+      "email":"kavi234@gmail.com",
+      "phone":9823561378
+    },
+    {
+        "id":3,
+        "name":"Jayan",
+        "department":"AIDS",
+        "designation":"Software Developer",
+        "salary":80000,
+        "email":"jayan345@gmail.com",
+        "phone":9745325675
+    }
+  ]
+}
+ 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,4 +11,315 @@
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nitesh’s Web Experiments</title>
+
+<style>
+
+:root {
+  --bg-gradient: linear-gradient(135deg, #fee2e2, #fff5f5);
+  --card-bg: #ffffff;
+  --primary: #b91c1c;
+  --secondary: #dc2626;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --border-soft: #fecaca;
+}
+
+
+body.dark {
+  --bg-gradient: linear-gradient(135deg, #1a0b0b, #0f0a0a);
+  --card-bg: #1f1212;
+  --primary: #ef4444;
+  --secondary: #dc2626;
+  --text-main: #f9fafb;
+  --text-muted: #d1d5db;
+  --border-soft: #7f1d1d;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text-main);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+header {
+  position: relative;
+  text-align: center;
+  padding: 70px 20px 40px;
+}
+
+header h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 16px;
+  color: var(--text-muted);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+
+.theme-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-switch span {
+  font-size: 16px;
+}
+
+.switch {
+  position: relative;
+  width: 48px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  background: linear-gradient(90deg, #fbbf24, #f97316);
+  border-radius: 999px;
+  transition: background 0.4s ease;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  left: 3px;
+  top: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.4s ease;
+}
+
+.switch input:checked + .slider {
+  background: linear-gradient(90deg, #7f1d1d, #111827);
+}
+
+.switch input:checked + .slider::before {
+  transform: translateX(24px);
+}
+
+
+.projects-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 26px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 16px;
+  padding: 24px;
+  position: relative;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  border-radius: 16px 16px 0 0;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 22px 45px rgba(239, 68, 68, 0.35);
+}
+
+.card h2 {
+  margin-top: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.card p {
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 10px 0 16px;
+}
+
+/* ================= BUTTON ================= */
+.card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--primary);
+  background-color: rgba(239, 68, 68, 0.12);
+  transition: all 0.25s ease;
+}
+
+.card a:hover {
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: #ffffff;
+  transform: translateX(5px);
+  box-shadow: 0 8px 18px rgba(239, 68, 68, 0.5);
+}
+
+footer {
+  text-align: center;
+  padding: 35px 10px;
+  font-size: 14px;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-soft);
+  background-color: rgba(0,0,0,0.03);
+}
+
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  .theme-switch {
+    transform: scale(0.9);
+    top: 14px;
+    right: 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🚀 Nitesh’s Web Experiments</h1>
+  <p>Mini projects built using HTML, CSS, XML, JavaScript & JSON</p>
+
+  <!-- Swipe Toggle -->
+  <div class="theme-switch">
+    <span>☀️</span>
+    <label class="switch">
+      <input type="checkbox" id="themeToggle">
+      <span class="slider"></span>
+    </label>
+    <span>🌙</span>
+  </div>
+</header>
+
+<div class="projects-container">
+<div class="projects">
+
+<div class="card">
+  <h2>Colour Change Page</h2>
+  <p>A fun experiment demonstrating dynamic background color changes.</p>
+  <a href="Colour%20Change%20Page/index.html" target="_blank">🔗 View Project</a>
+</div>
+
+<div class="card">
+  <h2>Stop Watch Page</h2>
+  <p>A stopwatch application with start, pause, and reset features.</p>
+  <a href="Stop%20Watch%20Web/index.html" target="_blank">🔗 View Project</a>
+</div>
+
+<div class="card">
+  <h2>Course Registration Page</h2>
+  <p>A simple course registration form using HTML and CSS.</p>
+  <a href="Web%20Pages/index.html" target="_blank">🔗 View Project</a>
+</div>
+
+<div class="card">
+  <h2>To-Do List</h2>
+  <p>An interactive task tracking and to-do list experiment.</p>
+  <a href="to-do-list/index.html" target="_blank">🔗 View Project</a>
+</div>
+
+<div class="card">
+  <h2>Anna University Web Page</h2>
+  <p>A fun web experiment showcasing basic information about Anna University.</p>
+  <a href="Anna%20University/index.html" target="_blank">🔗 View Project</a>
+</div>
+
+<div class="card">
+  <h2>Student Management System</h2>
+  <p>A cheerful mini project that manages student records.</p>
+  <a href="Student%20Management%20System/index.html" target="_blank">🔗 View Project</a>
+</div>
+
+<div class="card">
+  <h2>Library Record Management</h2>
+  <p>A delightful web experiment for managing library records.</p>
+  <a href="Library%20Record%20Management/index.html" target="_blank">🔗 View Project</a>
+</div>
+
+<div class="card">
+  <h2>Employee Record Management</h2>
+  <p>Employee management system using JavaScript and JSON.</p>
+  <a href="Employee%20Record%20Management/index.html" target="_blank">🔗 View Project</a>
+</div>
+
+  <div class="card">
+  <h2>Employee Information Portal</h2>
+  <p>A dynamic client-side web application for employee data management.</p>
+  <a href="Employee%20Information%20Portal/index.html" target="_blank">🔗 View Project</a>
+</div>
+
+</div>
+</div>
+
+<footer>
+© 2026 | Nitesh Web Experiments
+</footer>
+
+<script>
+  const toggle = document.getElementById("themeToggle");
+  toggle.addEventListener("change", () => {
+    document.body.classList.toggle("dark", toggle.checked);
+  });
+</script>
+
+</body>
+>>>>>>> 89f285f8c595bcc3d42a20a7f9dcd9e508b560d8
 </html>

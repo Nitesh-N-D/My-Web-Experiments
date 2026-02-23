@@ -1,0 +1,17 @@
+ [ 
+  { 
+    "id":101, 
+    "name":"Nitesh", 
+    "course":"Computer Science" 
+  }, 
+  { 
+    "id":102, 
+    "name":"Harish", 
+    "course":"Information Technology" 
+  }, 
+  { 
+    "id":103, 
+    "name":"Kavi", 
+    "course":"Production Technology" 
+  } 
+] 
