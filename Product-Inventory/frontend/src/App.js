@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const API = "http://localhost:3001/products";
+const API = "https://product-inventory-backend-g4vj.onrender.com";
 
 function App() {
   const [products, setProducts] = useState([]);
