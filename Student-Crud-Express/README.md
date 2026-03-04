@@ -1,160 +1,165 @@
 # Student CRUD API (Express.js)
 
-A simple **Student Record Management REST API** built using **Node.js and Express.js**.  
-This project demonstrates basic **CRUD operations (Create, Read, Update, Delete)** using JSON data.
+A simple **Student Record Management REST API** built using **Node.js
+and Express.js**. This project demonstrates basic **CRUD operations
+(Create, Read, Update, Delete)** using JSON data.
 
-## Live API
+------------------------------------------------------------------------
 
-Deployed on Render:
+## Live Deployment
+
+Backend API (Render)
 
 https://student-crud-express.onrender.com
 
-Example API endpoint:
+Example endpoint:
 
 https://student-crud-express.onrender.com/students
 
----
+------------------------------------------------------------------------
 
-# Features
+## Features
 
-- Add new student
-- View all students
-- Update student details
-- Delete student record
-- REST API using Express
-- JSON based data handling
-- Dynamic ID generation
+-   Add new student
+-   View all students
+-   Update student details
+-   Delete student record
+-   REST API built with Express.js
+-   JSON based data handling
+-   Dynamic ID generation
+-   Simple frontend form for CRUD operations
 
----
+------------------------------------------------------------------------
 
-# Tech Stack
+## Tech Stack
 
-Backend
-- Node.js
-- Express.js
-- JSON
+### Backend
 
-Deployment
-- Render
+-   Node.js
+-   Express.js
+-   JSON
 
----
+### Deployment
 
-# Project Structure
+-   Render
 
-Student-Crud-Express
-│
-├── server.js
-├── package.json
-├── public
-│   └── index.html
+------------------------------------------------------------------------
+
+## Project Structure
+
+Student-Crud-Express\
+├── server.js\
+├── package.json\
+├── public\
+│└── index.html\
 └── README.md
 
----
+------------------------------------------------------------------------
 
-# Installation
+## Installation & Setup
 
 Clone the repository
 
-git clone https://github.com/Nitesh-N-D/My-Web-Experiments.git
+    git clone https://github.com/Nitesh-N-D/My-Web-Experiments.git
 
-Navigate to the project folder
+Navigate to the project
 
-cd Student-Crud-Express
+    cd Student-Crud-Express
 
 Install dependencies
 
-npm install
+    npm install
 
 Run the server
 
-node server.js
+    node server.js
 
-Server will start at:
+Server runs at
 
-http://localhost:3000
+    http://localhost:3000
 
----
+------------------------------------------------------------------------
 
-# API Endpoints
+## API Endpoints
 
-GET all students
+### Get All Students
 
-GET /students
+    GET /students
 
-Example
+Example:
 
-https://student-crud-express.onrender.com/students
+    https://student-crud-express.onrender.com/students
 
----
+------------------------------------------------------------------------
 
-Add new student
+### Add New Student
 
-POST /students
+    POST /students
 
-Example JSON body
+Example JSON Body
 
-{
-  "name": "Nitesh",
-  "department": "CSE",
-  "year": 3
-}
+    {
+      "name": "Nitesh",
+      "department": "CSE",
+      "year": 3
+    }
 
----
+------------------------------------------------------------------------
 
-Update student
+### Update Student
 
-PUT /students/:id
+    PUT /students/:id
 
-Example
+Example:
 
-PUT /students/1
+    PUT /students/1
 
 Body
 
-{
-  "year": 4
-}
+    {
+      "year": 4
+    }
 
----
+------------------------------------------------------------------------
 
-Delete student
+### Delete Student
 
-DELETE /students/:id
+    DELETE /students/:id
 
-Example
+Example:
 
-DELETE /students/1
+    DELETE /students/1
 
----
+------------------------------------------------------------------------
 
-# Example Student JSON
+## Example Student JSON
 
-{
-  "id": 1,
-  "name": "Nitesh",
-  "department": "CSE",
-  "year": 3
-}
+    {
+      "id": 1,
+      "name": "Nitesh",
+      "department": "CSE",
+      "year": 3
+    }
 
----
+------------------------------------------------------------------------
 
-# Learning Outcomes
+## Learning Outcomes
 
 This project demonstrates:
 
-- Building REST APIs using Express.js
-- Performing CRUD operations
-- Handling JSON data
-- API testing with Postman
-- Deploying Node.js applications
+-   Building REST APIs using Express.js
+-   Performing CRUD operations
+-   Handling JSON data
+-   API testing using Postman
+-   Deploying Node.js applications
 
----
+------------------------------------------------------------------------
 
-# Author
+## Author
 
-Nitesh N D  
-Computer Science Engineering  
+**Nitesh N D**\
+Computer Science Engineering\
 Madras Institute of Technology
 
-GitHub:
+GitHub:\
 https://github.com/Nitesh-N-D
