@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Record Management</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 30px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h3 {
+      margin-top: 25px;
+      color: #333;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    input {
+      padding: 8px;
+      width: 180px;
+      margin-right: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 8px 14px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .delete-btn {
+      background-color: #dc3545;
+    }
+
+    .delete-btn:hover {
+      background-color: #a71d2a;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th {
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+    }
+
+    td {
+      padding: 8px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .actions {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h2>Student Record Management</h2>
+
+
+  <h3>Add Student</h3>
+  <div class="form-group">
+    <input id="name" placeholder="Name">
+    <input id="department" placeholder="Department">
+    <input id="year" placeholder="Year">
+    <button onclick="addStudent()">Add</button>
+  </div>
+
+
+  <h3>Update Student</h3>
+  <div class="form-group">
+    <input id="uid" placeholder="Student ID">
+    <input id="uyear" placeholder="New Year">
+    <button onclick="updateStudent()">Update</button>
+  </div>
+
+
+  <h3>Delete Student</h3>
+  <div class="form-group">
+    <input id="did" placeholder="Student ID">
+    <button class="delete-btn" onclick="deleteStudent()">Delete</button>
+  </div>
+
+
+  <h3>All Students</h3>
+  <div class="actions">
+    <button onclick="loadStudents()">Refresh</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody id="studentTable"></tbody>
+  </table>
+
+</div>
+
+<script>
+const api = "http://localhost:3000/students";
+
+
+function addStudent() {
+  const nameInput = document.getElementById("name").value;
+  const deptInput = document.getElementById("department").value;
+  const yearInput = document.getElementById("year").value;
+
+  fetch(api, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      name: nameInput,
+      department: deptInput,
+      year: Number(yearInput)
+    })
+  }).then(() => {
+    clearInputs();
+    loadStudents();
+  });
+}
+
+function loadStudents() {
+  fetch(api)
+    .then(res => res.json())
+    .then(data => {
+      studentTable.innerHTML = "";
+      data.forEach(s => {
+        studentTable.innerHTML += `
+          <tr>
+            <td>${s.id}</td>
+            <td>${s.name}</td>
+            <td>${s.department}</td>
+            <td>${s.year}</td>
+          </tr>`;
+      });
+    });
+}
+
+
+function updateStudent() {
+  const id = document.getElementById("uid").value;
+  const year = document.getElementById("uyear").value;
+
+  fetch(`${api}/${id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ year: Number(year) })
+  }).then(() => {
+    clearInputs();
+    loadStudents();
+  });
+}
+
+function deleteStudent() {
+  const id = document.getElementById("did").value;
+
+  fetch(`${api}/${id}`, { method: "DELETE" })
+   .then(() => {
+      clearInputs();
+      loadStudents();
+    });
+}
+
+loadStudents();
+
+function clearInputs() {
+  document.getElementById("name").value = "";
+  document.getElementById("department").value = "";
+  document.getElementById("year").value = "";
+
+  document.getElementById("uid").value = "";
+  document.getElementById("uyear").value = "";
+
+  document.getElementById("did").value = "";
+}
+</script>
+
+</body>
+</html>
