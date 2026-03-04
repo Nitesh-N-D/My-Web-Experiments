@@ -81,7 +81,7 @@ https://product-inventory-backend-g4vj.onrender.com/products
 
 ### 2. Run Backend
 
-    cd experiment-2-product-inventory/backend
+    cd product-inventory/backend
     npm install
     node server.js
 
@@ -93,7 +93,7 @@ Backend will start at:
 
 ### 3. Run Frontend
 
-    cd experiment-2-product-inventory/frontend
+    cd product-inventory/frontend
     npm install
     npm start
 
