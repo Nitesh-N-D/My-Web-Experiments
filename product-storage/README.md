@@ -14,18 +14,18 @@ data using MongoDB.
 -   Postman / Browser
 
 ## Project Structure
-product-storage
+
+product-storage 
 │
-├── config
-│   └── db.js
-├── models
-│   └── Product.js
-├── routes
-│   └── productRoutes.js
-├── server.js
-├── package.json
-├── package-lock.json
-├── .gitignore
+├── config 
+│└── db.js 
+├── models 
+│ └── Product.js 
+├──
+routes 
+│ └── productRoutes.js 
+├── server.js 
+├── package.json 
 └── README.md
 
 ## MongoDB Setup (Localhost)
