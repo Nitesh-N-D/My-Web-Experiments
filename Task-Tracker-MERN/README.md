@@ -182,6 +182,21 @@ Users can manage tasks efficiently using CRUD operations.
 
 ------------------------------------------------------------------------
 
+# Screenshots
+
+Task Tracker Dashboard
+<img width="975" height="475" alt="image" src="https://github.com/user-attachments/assets/8ca347b4-0837-45ce-b382-f234bd5bdfd8" />
+Adding Task
+<img width="975" height="475" alt="image" src="https://github.com/user-attachments/assets/89ba680e-0cb4-4706-9c7d-1942fe5d3fcf" />
+Searching Via Title
+<img width="975" height="475" alt="image" src="https://github.com/user-attachments/assets/3895094f-875a-480d-a91e-8e668b12cbb0" />
+Updating Task Pending into Complete
+<img width="975" height="475" alt="image" src="https://github.com/user-attachments/assets/ec785486-97c9-443b-b235-757d69ff2863" />
+MongoDB Database - taskDB
+<img width="975" height="525" alt="image" src="https://github.com/user-attachments/assets/b82ab47f-d01c-4bd5-866b-578bd1c8d63d" />
+
+------------------------------------------------------------------------
+
 # Author
 
 Nitesh N D\
