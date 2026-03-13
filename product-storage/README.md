@@ -1,4 +1,4 @@
-#  Basic Product Storage using MongoDB and Express
+# Basic Product Storage using MongoDB and Express
 
 ## Aim
 
@@ -13,71 +13,90 @@ data using MongoDB.
 -   Mongoose
 -   Postman / Browser
 
-## Project Structure
+## Project Folder Structure
 
-product-storage 
-│
-├── config 
-│└── db.js 
-├── models 
-│ └── Product.js 
-├──
-routes 
-│ └── productRoutes.js 
-├── server.js 
-├── package.json 
-└── README.md
+    product-storage
+    │
+    ├── config
+    │   └── db.js
+    │
+    ├── models
+    │   └── Product.js
+    │
+    ├── routes
+    │   └── productRoutes.js
+    │
+    ├── server.js
+    ├── package.json
+    ├── package-lock.json
+    └── README.md
 
 ## MongoDB Setup (Localhost)
 
-1.  Install MongoDB Community Server.
-2.  Start MongoDB service.
+1.  Install **MongoDB Community Server**.
+2.  Start the MongoDB service.
 
-Command: mongosh
+Open terminal and run:
 
-MongoDB runs on: mongodb://127.0.0.1:27017
+    mongosh
+
+MongoDB runs on:
+
+    mongodb://127.0.0.1:27017
 
 ## Database Connection
 
-File: config/db.js
+File: `config/db.js`
 
+``` javascript
 mongoose.connect("mongodb://127.0.0.1:27017/productDB");
+```
 
-This will create a database called **productDB** automatically when data
-is inserted.
+This automatically creates the database **productDB** when the first
+document is inserted.
 
 ## Install Dependencies
 
 Inside the project folder run:
 
-npm install
+    npm install
 
-Dependencies installed: - express - mongoose - cors - nodemon
+Dependencies installed:
+
+-   express
+-   mongoose
+-   cors
+-   nodemon
 
 ## Run the Server
 
-npm run dev
+Start the backend server:
 
-Server runs on:
+    npm run dev
 
-http://localhost:5000
+Server runs at:
+
+    http://localhost:5000
 
 ## API Endpoints
 
-Add Product POST /api/products/add
-
-Get All Products GET /api/products
-
-Get Single Product GET /api/products/:id
-
-Update Product PUT /api/products/:id
-
-Delete Product DELETE /api/products/:id
+  Operation            Method   Endpoint
+  -------------------- -------- ---------------------
+  Add Product          POST     `/api/products/add`
+  Get All Products     GET      `/api/products`
+  Get Single Product   GET      `/api/products/:id`
+  Update Product       PUT      `/api/products/:id`
+  Delete Product       DELETE   `/api/products/:id`
 
 ## Example JSON
 
-{ "name": "Laptop", "price": 50000, "category": "Electronics" }
+    {
+      "name": "Laptop",
+      "price": 50000,
+      "category": "Electronics"
+    }
 
 ## Output
 
-Product data is stored in MongoDB and retrieved using REST APIs.
+Product data is stored in **MongoDB** and retrieved using **REST API
+endpoints** built with **Express.js**.
