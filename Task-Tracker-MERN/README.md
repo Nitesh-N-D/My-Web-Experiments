@@ -182,16 +182,6 @@ Users can manage tasks efficiently using CRUD operations.
 
 ------------------------------------------------------------------------
 
-# Notes for GitHub Upload
-
-Do **NOT upload the following folders**:
-
-    node_modules/
-
-These will be automatically installed using:
-
-    npm install
-
 ------------------------------------------------------------------------
 
 # Author
