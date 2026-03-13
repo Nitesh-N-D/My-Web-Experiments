@@ -15,9 +15,18 @@ data using MongoDB.
 
 ## Project Structure
 
-product-storage │ ├── config │ └── db.js ├── models │ └── Product.js ├──
-routes │ └── productRoutes.js ├── server.js ├── package.json └──
-README.md
+product-storage 
+│ 
+├── config 
+│ └── db.js 
+├── models
+│ └── Product.js
+├──
+routes 
+│ └── productRoutes.js 
+├── server.js 
+├── package.json
+└── README.md
 
 ## MongoDB Setup (Localhost)
 
